@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CurrencyConverter</string>
+    <string name="no_internet_connection">No internet connection</string>
+    <string name="block_rates">Блок выбора валют</string>
+    <string name="sortBy_alphabet">Возрастание (алфавит)</string>
+    <string name="sortByDescending_alphabet">Убывание (алфавит)</string>
+    <string name="sortBy_value">Возрастание (значение)</string>
+    <string name="sortByDescending_value">Убывание (значение)</string>
+</resources>

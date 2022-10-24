@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".presentation.home.MainActivity">
+
+        <TextView
+            android:id="@+id/tvBlock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/block_rates"
+            android:layout_margin="8dp"
+            android:textSize="20sp"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.5"/>
+
+
+        <Spinner
+            android:id="@+id/currency_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvBlock"
+            app:layout_constraintWidth_percent="0.5" />
+
+        <Button
+            android:id="@+id/btSortByAlphabet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sortBy_alphabet"
+            android:layout_margin="8dp"
+            android:textSize="20sp"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/currency_spinner"
+            app:layout_constraintWidth_percent="0.5"/>
+
+        <Button
+            android:id="@+id/btSortByDescendingAlphabet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sortByDescending_alphabet"
+            android:layout_margin="8dp"
+            android:textSize="20sp"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btSortByAlphabet"
+            app:layout_constraintWidth_percent="0.5"/>
+
+        <Button
+            android:id="@+id/btSortByValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sortBy_value"
+            android:layout_margin="8dp"
+            android:textSize="20sp"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btSortByDescendingAlphabet"
+            app:layout_constraintWidth_percent="0.5"/>
+
+        <Button
+            android:id="@+id/btSortByDescendingValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sortByDescending_value"
+            android:layout_margin="8dp"
+            android:textSize="20sp"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btSortByValue"
+            app:layout_constraintWidth_percent="0.5"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/converted_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btSortByDescendingValue"
+            tools:listitem="@layout/row_item_currency_result" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/currency_spinner" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
